@@ -18,7 +18,8 @@
     "semotus": "2.3.*",
     "serve-static": "1.13.1",
     "supertype": "2.2.*",
-    "uglify-js": "2.7.5"
+    "uglify-js": "2.7.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "axios": "0.17.0",
@@ -45,7 +46,9 @@
     "test:config": "mocha test/config",
     "test:example": "mocha test/example",
     "test-d": "istanbul cover _mocha -- test/daemon/* -R spec",
-    "test-da": "istanbul cover _mocha -- test/daemon_auto/* -R spec"
+    "test-da": "istanbul cover _mocha -- test/daemon_auto/* -R spec",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "directories": {},
   "engines": {
@@ -58,5 +61,6 @@
   "bugs": {
     "url": "http://github.com/selsamman/amorphic/issues"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "snyk": true
 }
